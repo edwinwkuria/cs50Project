@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+
+{% block main%}
+<div class="container mb-5 mt-5">
+    <figure class="text-center">
+        <blockquote class="blockquote">
+        <p>Enter URL to be shortened. We support over 7 billion urls</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+        <cite title="Source Title">We will make it shorter than you think</cite>
+        </figcaption>
+    </figure>
+    <div class="mt-5 mb-5">
+        <form action="/" method="POST">
+            <div class="mb-5 row">
+                <input type="text" class="form-control" id="longurl" name="longurl" 
+                placeholder="http://www/yourwebsite.com/logurl">
+            </div>
+            <div class="d-grid gap-2 col-6 mx-auto mb-5">
+                <button type="submit" class="btn btn-primary">SHORTEN</button>
+            </div>
+        </form>
+    </div>
+
+    {% if longurl %}
+    <div class="card">
+        <h5 class="card-header">New Url</h5>
+        <div class="card-body">
+          {% if shorturl %}
+          <h5 class="card-title">{{ shorturl }}</h5>
+          {% endif %}
+          <p class="card-text">{{ longurl }}</p>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock%}
