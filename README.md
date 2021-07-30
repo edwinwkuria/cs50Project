@@ -1,5 +1,5 @@
 # cs50Project
-#### Video Demo: 
+#### Video Demo: https://youtu.be/CIUFLk5dG7Ucls
 #### Description: A web url shortening application. 
 
 *Technology stack: Python(Flask), SQLITE*
